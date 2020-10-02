@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLPhieuDienLucModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DiaDiem">
+    <Key>
+      <PropertyRef Name="MaDiaDiem" />
+    </Key>
+    <Property Name="MaDiaDiem" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="TenDiaDiem" Type="nvarchar" MaxLength="255" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="DiaDiemThaoTac">
+    <Key>
+      <PropertyRef Name="MaDiaDiemThaoTac" />
+    </Key>
+    <Property Name="MaDiaDiemThaoTac" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MaPhieuThaoTac" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaDiaDiem" Type="nvarchar" MaxLength="20" />
+    <Property Name="Muc" Type="nvarchar" MaxLength="10" />
+    <Property Name="HoanThanh" Type="bit" />
+  </EntityType>
+  <EntityType Name="GiaoNhanSau">
+    <Key>
+      <PropertyRef Name="MaGiaoNhanSau" />
+    </Key>
+    <Property Name="MaGiaoNhanSau" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaPhieuThaoTac" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ThoiGian" Type="datetime" />
+    <Property Name="DonVi" Type="nvarchar" MaxLength="50" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
+    <Property Name="NoiDung" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="GiaoNhanTruoc">
+    <Key>
+      <PropertyRef Name="MaGiaoNhanTruoc" />
+    </Key>
+    <Property Name="MaGiaoNhanTruoc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaPhieuThaoTac" Type="nvarchar" MaxLength="50" />
+    <Property Name="ThoiGian" Type="datetime" />
+    <Property Name="DonVi" Type="nvarchar" MaxLength="50" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
+    <Property Name="NoiDung" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="PhieuThaoTac">
+    <Key>
+      <PropertyRef Name="MaPhieuThaoTac" />
+    </Key>
+    <Property Name="MaPhieuThaoTac" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenPhieuThaoTac" Type="nvarchar" MaxLength="50" />
+    <Property Name="NguoiVietPhieu" Type="nvarchar" MaxLength="50" />
+    <Property Name="ChucVuVietPhieu" Type="nvarchar" MaxLength="50" />
+    <Property Name="NguoiDuyetPhieu" Type="nvarchar" MaxLength="50" />
+    <Property Name="ChucVuDuyetPhieu" Type="nvarchar" MaxLength="50" />
+    <Property Name="NguoiGiamSat" Type="nvarchar" MaxLength="50" />
+    <Property Name="ChucVuGiamSat" Type="nvarchar" MaxLength="50" />
+    <Property Name="NguoiThaoTac" Type="nvarchar" MaxLength="50" />
+    <Property Name="ChucVuThaoTac" Type="nvarchar" MaxLength="50" />
+    <Property Name="MucDichThaoTac" Type="nvarchar" MaxLength="500" />
+    <Property Name="TgBatDau" Type="datetime" />
+    <Property Name="TgKetThuc" Type="datetime" />
+    <Property Name="DonViDeNghi" Type="nvarchar" MaxLength="20" />
+    <Property Name="DieuKienThucHien" Type="nvarchar" MaxLength="1000" />
+    <Property Name="LuuYKetDay" Type="nvarchar" MaxLength="1000" />
+    <Property Name="BienPhapAnToan" Type="nvarchar" MaxLength="1000" />
+    <Property Name="LuuYKhac" Type="nvarchar" MaxLength="1000" />
+    <Property Name="SuKienBatThuong" Type="nvarchar" MaxLength="1000" />
+    <Property Name="NgayLapPhieu" Type="datetime" />
+    <Property Name="NgayThaoTac" Type="datetime" />
+    <Property Name="TrangThai" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TrinhTuThaoTac">
+    <Key>
+      <PropertyRef Name="MaTrinhTuThaoTac" />
+    </Key>
+    <Property Name="MaTrinhTuThaoTac" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaDiaDiemThaoTac" Type="nvarchar" MaxLength="50" />
+    <Property Name="Buoc" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="NoiDung" Type="nvarchar" MaxLength="255" />
+    <Property Name="DaThucHien" Type="bit" />
+    <Property Name="ThoiGianBatDau" Type="datetime" />
+    <Property Name="ThoiGianKetThuc" Type="datetime" />
+    <Property Name="NguoiRaLenh" Type="nvarchar" MaxLength="50" />
+    <Property Name="NguoiNhanLenh" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserPassword" Type="varchar" MaxLength="50" />
+    <Property Name="UserRoles" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <Association Name="FK_DiaDiemThaoTac_DiaDiem">
+    <End Role="DiaDiem" Type="Self.DiaDiem" Multiplicity="0..1" />
+    <End Role="DiaDiemThaoTac" Type="Self.DiaDiemThaoTac" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiaDiem">
+        <PropertyRef Name="MaDiaDiem" />
+      </Principal>
+      <Dependent Role="DiaDiemThaoTac">
+        <PropertyRef Name="MaDiaDiem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DiaDiemThaoTac_PhieuThaoTac">
+    <End Role="PhieuThaoTac" Type="Self.PhieuThaoTac" Multiplicity="0..1" />
+    <End Role="DiaDiemThaoTac" Type="Self.DiaDiemThaoTac" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhieuThaoTac">
+        <PropertyRef Name="MaPhieuThaoTac" />
+      </Principal>
+      <Dependent Role="DiaDiemThaoTac">
+        <PropertyRef Name="MaPhieuThaoTac" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GiaoNhanSau_PhieuThaoTac">
+    <End Role="PhieuThaoTac" Type="Self.PhieuThaoTac" Multiplicity="1" />
+    <End Role="GiaoNhanSau" Type="Self.GiaoNhanSau" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhieuThaoTac">
+        <PropertyRef Name="MaPhieuThaoTac" />
+      </Principal>
+      <Dependent Role="GiaoNhanSau">
+        <PropertyRef Name="MaPhieuThaoTac" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GiaoNhanTruoc_PhieuThaoTac">
+    <End Role="PhieuThaoTac" Type="Self.PhieuThaoTac" Multiplicity="0..1" />
+    <End Role="GiaoNhanTruoc" Type="Self.GiaoNhanTruoc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhieuThaoTac">
+        <PropertyRef Name="MaPhieuThaoTac" />
+      </Principal>
+      <Dependent Role="GiaoNhanTruoc">
+        <PropertyRef Name="MaPhieuThaoTac" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TrinhTuThaoTac_DiaDiemThaoTac">
+    <End Role="DiaDiemThaoTac" Type="Self.DiaDiemThaoTac" Multiplicity="0..1" />
+    <End Role="TrinhTuThaoTac" Type="Self.TrinhTuThaoTac" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiaDiemThaoTac">
+        <PropertyRef Name="MaDiaDiemThaoTac" />
+      </Principal>
+      <Dependent Role="TrinhTuThaoTac">
+        <PropertyRef Name="MaDiaDiemThaoTac" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QLPhieuDienLucModelStoreContainer">
+    <EntitySet Name="DiaDiem" EntityType="Self.DiaDiem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DiaDiemThaoTac" EntityType="Self.DiaDiemThaoTac" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GiaoNhanSau" EntityType="Self.GiaoNhanSau" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GiaoNhanTruoc" EntityType="Self.GiaoNhanTruoc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PhieuThaoTac" EntityType="Self.PhieuThaoTac" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TrinhTuThaoTac" EntityType="Self.TrinhTuThaoTac" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_DiaDiemThaoTac_DiaDiem" Association="Self.FK_DiaDiemThaoTac_DiaDiem">
+      <End Role="DiaDiem" EntitySet="DiaDiem" />
+      <End Role="DiaDiemThaoTac" EntitySet="DiaDiemThaoTac" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DiaDiemThaoTac_PhieuThaoTac" Association="Self.FK_DiaDiemThaoTac_PhieuThaoTac">
+      <End Role="PhieuThaoTac" EntitySet="PhieuThaoTac" />
+      <End Role="DiaDiemThaoTac" EntitySet="DiaDiemThaoTac" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GiaoNhanSau_PhieuThaoTac" Association="Self.FK_GiaoNhanSau_PhieuThaoTac">
+      <End Role="PhieuThaoTac" EntitySet="PhieuThaoTac" />
+      <End Role="GiaoNhanSau" EntitySet="GiaoNhanSau" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GiaoNhanTruoc_PhieuThaoTac" Association="Self.FK_GiaoNhanTruoc_PhieuThaoTac">
+      <End Role="PhieuThaoTac" EntitySet="PhieuThaoTac" />
+      <End Role="GiaoNhanTruoc" EntitySet="GiaoNhanTruoc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TrinhTuThaoTac_DiaDiemThaoTac" Association="Self.FK_TrinhTuThaoTac_DiaDiemThaoTac">
+      <End Role="DiaDiemThaoTac" EntitySet="DiaDiemThaoTac" />
+      <End Role="TrinhTuThaoTac" EntitySet="TrinhTuThaoTac" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLPhieuDienLucModelStoreContainer" CdmEntityContainer="QLPhieuDienLucEntities">
+    <EntitySetMapping Name="DiaDiems">
+      <EntityTypeMapping TypeName="QLPhieuDienLucModel.DiaDiem">
+        <MappingFragment StoreEntitySet="DiaDiem">
+          <ScalarProperty Name="MaDiaDiem" ColumnName="MaDiaDiem" />
+          <ScalarProperty Name="TenDiaDiem" ColumnName="TenDiaDiem" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DiaDiemThaoTacs">
+      <EntityTypeMapping TypeName="QLPhieuDienLucModel.DiaDiemThaoTac">
+        <MappingFragment StoreEntitySet="DiaDiemThaoTac">
+          <ScalarProperty Name="MaDiaDiemThaoTac" ColumnName="MaDiaDiemThaoTac" />
+          <ScalarProperty Name="MaPhieuThaoTac" ColumnName="MaPhieuThaoTac" />
+          <ScalarProperty Name="MaDiaDiem" ColumnName="MaDiaDiem" />
+          <ScalarProperty Name="Muc" ColumnName="Muc" />
+          <ScalarProperty Name="HoanThanh" ColumnName="HoanThanh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GiaoNhanSaus">
+      <EntityTypeMapping TypeName="QLPhieuDienLucModel.GiaoNhanSau">
+        <MappingFragment StoreEntitySet="GiaoNhanSau">
+          <ScalarProperty Name="MaGiaoNhanSau" ColumnName="MaGiaoNhanSau" />
+          <ScalarProperty Name="MaPhieuThaoTac" ColumnName="MaPhieuThaoTac" />
+          <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
+          <ScalarProperty Name="DonVi" ColumnName="DonVi" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GiaoNhanTruocs">
+      <EntityTypeMapping TypeName="QLPhieuDienLucModel.GiaoNhanTruoc">
+        <MappingFragment StoreEntitySet="GiaoNhanTruoc">
+          <ScalarProperty Name="MaGiaoNhanTruoc" ColumnName="MaGiaoNhanTruoc" />
+          <ScalarProperty Name="MaPhieuThaoTac" ColumnName="MaPhieuThaoTac" />
+          <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
+          <ScalarProperty Name="DonVi" ColumnName="DonVi" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhieuThaoTacs">
+      <EntityTypeMapping TypeName="QLPhieuDienLucModel.PhieuThaoTac">
+        <MappingFragment StoreEntitySet="PhieuThaoTac">
+          <ScalarProperty Name="MaPhieuThaoTac" ColumnName="MaPhieuThaoTac" />
+          <ScalarProperty Name="TenPhieuThaoTac" ColumnName="TenPhieuThaoTac" />
+          <ScalarProperty Name="NguoiVietPhieu" ColumnName="NguoiVietPhieu" />
+          <ScalarProperty Name="ChucVuVietPhieu" ColumnName="ChucVuVietPhieu" />
+          <ScalarProperty Name="NguoiDuyetPhieu" ColumnName="NguoiDuyetPhieu" />
+          <ScalarProperty Name="ChucVuDuyetPhieu" ColumnName="ChucVuDuyetPhieu" />
+          <ScalarProperty Name="NguoiGiamSat" ColumnName="NguoiGiamSat" />
+          <ScalarProperty Name="ChucVuGiamSat" ColumnName="ChucVuGiamSat" />
+          <ScalarProperty Name="NguoiThaoTac" ColumnName="NguoiThaoTac" />
+          <ScalarProperty Name="ChucVuThaoTac" ColumnName="ChucVuThaoTac" />
+          <ScalarProperty Name="MucDichThaoTac" ColumnName="MucDichThaoTac" />
+          <ScalarProperty Name="TgBatDau" ColumnName="TgBatDau" />
+          <ScalarProperty Name="TgKetThuc" ColumnName="TgKetThuc" />
+          <ScalarProperty Name="DonViDeNghi" ColumnName="DonViDeNghi" />
+          <ScalarProperty Name="DieuKienThucHien" ColumnName="DieuKienThucHien" />
+          <ScalarProperty Name="LuuYKetDay" ColumnName="LuuYKetDay" />
+          <ScalarProperty Name="BienPhapAnToan" ColumnName="BienPhapAnToan" />
+          <ScalarProperty Name="LuuYKhac" ColumnName="LuuYKhac" />
+          <ScalarProperty Name="SuKienBatThuong" ColumnName="SuKienBatThuong" />
+          <ScalarProperty Name="NgayLapPhieu" ColumnName="NgayLapPhieu" />
+          <ScalarProperty Name="NgayThaoTac" ColumnName="NgayThaoTac" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="QLPhieuDienLucModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrinhTuThaoTacs">
+      <EntityTypeMapping TypeName="QLPhieuDienLucModel.TrinhTuThaoTac">
+        <MappingFragment StoreEntitySet="TrinhTuThaoTac">
+          <ScalarProperty Name="MaTrinhTuThaoTac" ColumnName="MaTrinhTuThaoTac" />
+          <ScalarProperty Name="MaDiaDiemThaoTac" ColumnName="MaDiaDiemThaoTac" />
+          <ScalarProperty Name="Buoc" ColumnName="Buoc" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="DaThucHien" ColumnName="DaThucHien" />
+          <ScalarProperty Name="ThoiGianBatDau" ColumnName="ThoiGianBatDau" />
+          <ScalarProperty Name="ThoiGianKetThuc" ColumnName="ThoiGianKetThuc" />
+          <ScalarProperty Name="NguoiRaLenh" ColumnName="NguoiRaLenh" />
+          <ScalarProperty Name="NguoiNhanLenh" ColumnName="NguoiNhanLenh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="QLPhieuDienLucModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="UserRoles" ColumnName="UserRoles" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
